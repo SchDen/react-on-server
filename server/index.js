@@ -16,14 +16,13 @@ global.initAppData = {
 var AppRender = require('./render.js');
 
 http.createServer((req, res) => {
-    var markup;
     var file;
 
     if (req.url === '/') {
         res.setHeader('Content-Type', 'text/html');
 
-        markup = AppRender.render();
-        res.end(markup);
+        file = AppRender.render();
+        res.end(file);
     } else if (req.url === '/public/js/app.js') {
         res.setHeader('Content-Type', 'text/javascript');
 
