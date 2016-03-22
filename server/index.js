@@ -41,5 +41,7 @@ http.createServer((req, res) => {
     // The http server listens on port 3000
 }).listen(3000, (err) => {
     if (err) throw err;
-    console.log('Listening on 3000...');
+
+    console.log('----------------------------------------------------');
+    console.log('Complete: open http://localhost:3000 in your browser');
 });

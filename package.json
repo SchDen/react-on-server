@@ -12,9 +12,8 @@
     "server rendering"
   ],
   "scripts": {
-    "start": "node server.js",
-    "clear-assets": "rm -rf public/*",
-    "build": "npm run clear-assets && NODE_ENV=development webpack -d --progress --colors --display-error-details"
+    "start": "npm run build && node server",
+    "build": "rm -rf public/* && NODE_ENV=development webpack -d --progress --colors --display-error-details"
   },
   "author": "Shapkin Denis",
   "license": "MIT",
